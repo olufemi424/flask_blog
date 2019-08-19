@@ -1,4 +1,5 @@
-{% extends "layout.html" %} {% block content%}
+{% extends "layout.html" %} 
+{% block content%}
 <div class="content-section">
   <form method="POST" action="">
     {{ form.hidden_tag() }}
@@ -42,10 +43,10 @@
     </fieldset>
     <div class="form-group">
       {{form.submit(class="btn btn-outline-info")}}
+      <small class="text-muted ml-2">
+        <a href="{{url_for('reset_request')}}">Forget Password?</a>
+      </small>
     </div>
-    <small class="text-muted ml-2">
-      <a href="#">Forget Password?</a>
-    </small>
   </form>
 </div>
 <div class="border-top pt-3">
